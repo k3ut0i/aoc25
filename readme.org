@@ -1,0 +1,2 @@
+* Advent of Code 2025
+I'm starting with mercury-lang.

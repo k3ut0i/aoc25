@@ -1,0 +1,7 @@
+* TODO Day01
+** DONE Part1
+- Took a while to get _io_ working.
+- Used a _foldl2_, probably for the first time. I initially wrote a iterative function to traverse the list.
+
+** TODO Part2
+Couldn't get the correct answer. Making some mistake. I got 6392 first and 6287 next. The actual answer is b/w them.
