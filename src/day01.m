@@ -14,17 +14,16 @@ parse_inst(['R'|Nums], I) :- to_int(from_char_list(Nums), I).
 :- pred parse_inst_string(string::in, int::out) is semidet.
 parse_inst_string(S, I) :- parse_inst(to_char_list(S), I).
 
-:- func iszero(int) = int.
-iszero(X) = Y :- X = 0 -> Y = 1; Y = 0.
+%% stashed in utils
+%% :- func iszero(int) = int.
+%% iszero(X) = Y :- X = 0 -> Y = 1; Y = 0.
 
 :- pred part1(int::in, int::in, int::out, int::in, int::out) is det.
-part1(Diff, Pos1, Pos2, C1, C1+iszero(Pos2)) :-
-    Pos2 = (Pos1+Diff) mod 100.
+part1(Diff, Pos1, Pos2, C1, C1+iszero(Pos2)) :- Pos2 = (Pos1+Diff) mod 100.
 
 %%% THIS IS WRONG needs correction.
 :- pred part2(int::in, int::in, int::out, int::in, int::out) is det.
-part2(Diff, Pos1, Pos2, C1, C1+ncirc(Pos1, Diff)) :-
-    Pos2 = (Pos1+Diff) mod 100.
+part2(Diff, Pos1, (Pos1+Diff) mod 100, C1, C1+ncirc(Pos1, Diff)).
 
 :- func ncirc1(int, int) = int.
 ncirc1(Pos, Diff) = abs(div(Pos+Diff, 100)).
