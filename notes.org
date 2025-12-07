@@ -11,3 +11,7 @@ Couldn't get the correct answer. Making some mistake. I got 6392 first and 6287 
 - A simple fold for creation.
 - Another for counting (filter+length).
 - counting cardinality is even simpler.
+
+* DONE Day06
+- map2, foldl_corresponding.
+- tranpose and split_when utility functions
