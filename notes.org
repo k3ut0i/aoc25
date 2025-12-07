@@ -5,3 +5,9 @@
 
 ** TODO Part2
 Couldn't get the correct answer. Making some mistake. I got 6392 first and 6287 next. The actual answer is b/w them.
+
+* DONE Day05
+- ~diet~ module which implements fat sets, made this simple.
+- A simple fold for creation.
+- Another for counting (filter+length).
+- counting cardinality is even simpler.
